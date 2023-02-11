@@ -56,6 +56,17 @@ Student &Student::setScore(int  num, int* &arr)
     return *this;
 }
 
+std::string Student::getYir()const{
+return "УИР не определен для студентов этого типа\n";
+}
+    std::string Student::getPlace_yir()const{
+return "УИР не определен для студентов этого типа\n";
+    }
+    int Student::getYir_score()const{
+std::cout<<"УИР не определен для студентов этого типа\n";
+    return 0;
+    }
+
 
 
 
@@ -87,22 +98,112 @@ std::string Old_student::getType()const {
 }
 Old_student &Old_student::setYir(const std::string &y){
     yir=y;
+    return *this;
 }
 Old_student &Old_student::setPlace_yir(const std::string &place){
     place_yir=place;
+    return *this;
 }
 Old_student &Old_student::setYir_score(int score){
 yir_score=score;
+return *this; 
 }
-/*
-Group_table::Group_table(){
-    group_index="no data";
+
+
+
+Group::Group(){
     number_disciplines=0;
     type_studients="no data";
+    index="no data";
 }
+Group::Group(Describer* stud){
+    number_disciplines=stud->getNumber_score();
+    type_studients=stud->getType();
+    table.emplace(stud->getFamily(),stud);
+    index="no data";
+}
+
+void Group::setNumber_disciplines(int num_dis){
+    number_disciplines=num_dis;
+}
+void Group::setType_studients(std::string typ_st){
+    type_studients=typ_st;
+}
+void Group::setIndex(std::string ind){
+    index=ind;
+}
+bool Group::insert(Describer* stud){
+    bool res=false;
+    if(table.find(stud->getFamily())==table.end()){
+table.emplace(stud->getFamily(),stud);
+    res=true;}
+    return res;
+}
+bool Group::erase(std::string stud){
+    bool res=false;
+    if(table.find(stud)!=table.end()){
+table.erase(stud);
+    res=true;}
+    return res;
+}
+
+
+int Group::getNumber_disciplines()const{
+    return number_disciplines;
+}
+std::string Group::getType_studients()const{
+    return type_studients;
+}
+std::string Group::getIndex()const{
+    return index;
+}
+std::map<const std::string,Describer*> Group::getTable()const{
+    return table;
+}
+
+void Group::show()
+{
+    std::cout << "Index: " << index << "; "
+              << "Type of group: " << type_studients << "\n";
+    std::cout << "Number of disciplines: " << number_disciplines << "\n";
+    std::cout << "Family    Type of student     Number of score     Scores\n";
+    std::map<const std::string, Describer *>::iterator it;
+    for (it = table.begin(); it != table.end(); it++)
+    {
+    std::cout << it->second->getFamily() << " " << it->second->getType() << " " << it->second->getNumber_score() << " ";
+    int *arr = it->second->getArr_score();
+    for (int i = 0; i < it->second->getNumber_score(); i++)
+        std::cout << arr[i] << " ";
+    std::cout << "\n";
+    }
+}
+
+std::string Group::getType(std::string fam)const{
+std::map<const std::string, Describer *>::const_iterator it;
+it=table.find(fam);
+if(it!=table.end())
+return it->second->getType();
+std::cout<<"not found \n";
+return "not found";
+}
+int* Group::getArr_score(std::string fam)const{
+std::map<const std::string, Describer *>::const_iterator it;
+it=table.find(fam);
+if(it!=table.end())
+return it->second->getArr_score();
+std::cout<<"not found \n";
+return 0;
+}
+
+
+/*
+
 Group_table::Group_table(std::string index, int number, std::string type){
-    group_index=index;
-    number_disciplines=number;
-    type_studients=type;
-}
-*/
+    info in;
+    in.number_disciplines=number;
+    in.type_studients=type;
+    grouptable.emplace(index, in);
+}*/
+
+
+
