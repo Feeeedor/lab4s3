@@ -1,5 +1,8 @@
 #include "prog4.cpp"
 #include "prog4.h"
+
+
 int main(){
-    std::cout<<"JK";
+   Group_table G;
+   dialog(G); 
 }
