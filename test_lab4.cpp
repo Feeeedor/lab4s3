@@ -1,6 +1,9 @@
-#include "prog4.h"
 #include "prog4.cpp"
-
+#include "prog4.h"
+#include "Student.h"
+#include "Group.h"
+#include "Student.cpp"
+#include "Group.cpp"
 #include <gtest/gtest.h>
 
 TEST(student_constructor, empty)
@@ -182,7 +185,7 @@ TEST(group_constructor, empty){
     Group g;
     ASSERT_EQ(g.getType_students(),"no data");
     ASSERT_EQ(g.getIndex(),"no data");
-    ASSERT_EQ(g.getNumber_disciplines(), 0);
+    ASSERT_EQ(g.getNumber_disciplines(), 1);
 }
 TEST(group_constructor, unempty){
     int num=3;
@@ -194,7 +197,8 @@ TEST(group_constructor, unempty){
     std::string fam="Petrov P.P.";
     Student s(fam,num,scr);
     delete []scr;
-    Group g(&s);
+    Student *st=&s;
+    Group g(st);
     ASSERT_EQ(g.getType_students(),"junior Student");
     ASSERT_EQ(g.getNumber_disciplines(), 3);
     ASSERT_EQ(g.getIndex(),"no data");
@@ -205,7 +209,7 @@ TEST(group_set, index){
     g.setIndex("B15209");
     ASSERT_EQ(g.getType_students(),"no data");
     ASSERT_EQ(g.getIndex(),"B15209");
-    ASSERT_EQ(g.getNumber_disciplines(), 0);
+    ASSERT_EQ(g.getNumber_disciplines(), 1);
 }
 TEST(group_set, number_disciplines){
     Group g;
@@ -219,7 +223,7 @@ TEST(group_set, type_student){
     g.setType_students("junior");
     ASSERT_EQ(g.getType_students(),"junior");
     ASSERT_EQ(g.getIndex(),"no data");
-    ASSERT_EQ(g.getNumber_disciplines(), 0);
+    ASSERT_EQ(g.getNumber_disciplines(), 1);
 }
 TEST(Group_insert,insert){
 Group g;
@@ -244,7 +248,26 @@ ASSERT_EQ(it->second->getArr_score()[2], 5);
 ASSERT_EQ(it->second->getType(),"junior Student");
 }
 
+TEST(Group,getFamily){
 
+std::string ind="111";
+Group g(ind);
+int*a;
+a=new int[2];
+a[0]=1;
+a[1]=2;
+Student st(ind,2,a);
+g.insert(&st);
+std::map<const std::string,Student*>::iterator it=g.begin();
+
+ASSERT_EQ(it->second->getFamily(),"111");
+
+
+
+delete []a;
+
+
+}
 
 
 

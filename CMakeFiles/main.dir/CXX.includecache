@@ -6,23 +6,51 @@
 
 #IncludeRegexTransform: 
 
-/home/fedor/hz/lab4s3/main.cpp
-prog4.cpp
-/home/fedor/hz/lab4s3/prog4.cpp
-prog4.h
-/home/fedor/hz/lab4s3/prog4.h
+/home/fedor/hz/lab4s3/Group.cpp
+Student.h
+/home/fedor/hz/lab4s3/Student.h
+Group.h
+/home/fedor/hz/lab4s3/Group.h
 
-/home/fedor/hz/lab4s3/prog4.cpp
-prog4.h
-/home/fedor/hz/lab4s3/prog4.h
+/home/fedor/hz/lab4s3/Group.h
+Student.h
+/home/fedor/hz/lab4s3/Student.h
+map
+-
 
-/home/fedor/hz/lab4s3/prog4.h
+/home/fedor/hz/lab4s3/Student.cpp
+Student.h
+/home/fedor/hz/lab4s3/Student.h
+
+/home/fedor/hz/lab4s3/Student.h
 iostream
 -
 string
 -
 stdlib.h
 -
-map
--
+
+/home/fedor/hz/lab4s3/main.cpp
+prog4.cpp
+/home/fedor/hz/lab4s3/prog4.cpp
+prog4.h
+/home/fedor/hz/lab4s3/prog4.h
+Student.h
+/home/fedor/hz/lab4s3/Student.h
+Group.h
+/home/fedor/hz/lab4s3/Group.h
+Student.cpp
+/home/fedor/hz/lab4s3/Student.cpp
+Group.cpp
+/home/fedor/hz/lab4s3/Group.cpp
+
+/home/fedor/hz/lab4s3/prog4.cpp
+prog4.h
+/home/fedor/hz/lab4s3/prog4.h
+
+/home/fedor/hz/lab4s3/prog4.h
+Student.h
+/home/fedor/hz/lab4s3/Student.h
+Group.h
+/home/fedor/hz/lab4s3/Group.h
 
