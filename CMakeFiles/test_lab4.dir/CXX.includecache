@@ -29,6 +29,8 @@ string
 -
 stdlib.h
 -
+vector
+-
 
 /home/fedor/hz/lab4s3/prog4.cpp
 prog4.h
