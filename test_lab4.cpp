@@ -1,3 +1,5 @@
+#include "vector_r.h"
+
 #include "prog4.cpp"
 #include "prog4.h"
 #include "Student.h"
@@ -18,7 +20,7 @@ TEST(student, constructor_empty)
 TEST(student, constructor_unempty)
 {
     int num = 3;
-    std::vector<int> scr;
+    vector<int> scr;
     scr.push_back(2);
     scr.push_back(3);
     scr.push_back(5);
@@ -48,7 +50,7 @@ TEST(student, set_family1)
 TEST(student, set_family2)
 {
     int num = 3;
-    std::vector<int> scr;
+    vector<int> scr;
     scr.push_back(2);
     scr.push_back(3);
     scr.push_back(5);
@@ -90,7 +92,7 @@ TEST(student, set_number_score2)
 TEST(student, set_score)
 {
     Student s;
-    std::vector<int> scr;
+    vector<int> scr;
     scr.push_back(2);
     scr.push_back(3);
     scr.push_back(5);
@@ -108,12 +110,12 @@ TEST(student, set_score)
 TEST(student, set2_score2)
 {
     Student s;
-    std::vector<int> scr;
+    vector<int> scr;
     scr.push_back(2);
     scr.push_back(4);
     scr.push_back(5);
     s.setScore(scr);
-    std::vector<int> scr2;
+    vector<int> scr2;
     scr2.push_back(2);
     scr2.push_back(4);
     scr2.push_back(5);
@@ -146,7 +148,7 @@ TEST(old_student, constructor_empty)
 TEST(old_student, constructor_unempty)
 {
     int num = 3;
-    std::vector<int> scr;
+    vector<int> scr;
     scr.push_back(2);
     scr.push_back(3);
     scr.push_back(5);
@@ -185,7 +187,7 @@ TEST(old_student, set_family)
 TEST(old_student, set_family2)
 {
     int num = 3;
-    std::vector<int> scr;
+    vector<int> scr;
     scr.push_back(2);
     scr.push_back(3);
     scr.push_back(5);
@@ -238,7 +240,7 @@ TEST(old_student, set_numberscore2)
 TEST(old_student_set, score)
 {
     Old_student s;
-    std::vector<int> scr;
+    vector<int> scr;
     scr.push_back(2);
     scr.push_back(3);
     scr.push_back(5);
@@ -258,13 +260,13 @@ TEST(old_student_set, score)
 TEST(old_student_set, score2)
 {
     Old_student s;
-    std::vector<int> scr;
+    vector<int> scr;
     scr.push_back(2);
     scr.push_back(3);
     scr.push_back(5);
     s.setScore(scr);
     scr.clear();
-    std::vector<int> scr2;
+    vector<int> scr2;
     scr2.push_back(2);
     scr2.push_back(4);
     scr2.push_back(5);

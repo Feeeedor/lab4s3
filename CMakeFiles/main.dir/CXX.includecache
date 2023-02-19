@@ -7,6 +7,8 @@
 #IncludeRegexTransform: 
 
 /home/fedor/hz/lab4s3/Group.cpp
+vector_r.h
+/home/fedor/hz/lab4s3/vector_r.h
 Student.h
 /home/fedor/hz/lab4s3/Student.h
 Group.h
@@ -29,8 +31,8 @@ string
 -
 stdlib.h
 -
-vector
--
+vector_r.h
+/home/fedor/hz/lab4s3/vector_r.h
 
 /home/fedor/hz/lab4s3/main.cpp
 prog4.cpp
@@ -45,14 +47,20 @@ Student.cpp
 /home/fedor/hz/lab4s3/Student.cpp
 Group.cpp
 /home/fedor/hz/lab4s3/Group.cpp
+vector_r.h
+/home/fedor/hz/lab4s3/vector_r.h
 
 /home/fedor/hz/lab4s3/prog4.cpp
 prog4.h
 /home/fedor/hz/lab4s3/prog4.h
 
 /home/fedor/hz/lab4s3/prog4.h
+vector_r.h
+/home/fedor/hz/lab4s3/vector_r.h
 Student.h
 /home/fedor/hz/lab4s3/Student.h
 Group.h
 /home/fedor/hz/lab4s3/Group.h
+
+/home/fedor/hz/lab4s3/vector_r.h
 

@@ -34,13 +34,4 @@ public:
     std::map<const std::string, Student *>::iterator end();
 };
 
-int dialog(Group *&g);
-void d_setindex(Group *&);              
-void d_setNumber_disciplines(Group *&); 
-void d_setType_students(Group *&);      
-void d_getIndex(Group *&);              
-void d_getNumber_disciplines(Group *&); 
-void d_getType_students(Group *&);      
-void d_insertStudent(Group *&);         
-void d_eraseStudent(Group *&);          
-void d_change_student(Group *&);        
+    

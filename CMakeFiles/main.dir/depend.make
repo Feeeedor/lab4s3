@@ -8,4 +8,5 @@ CMakeFiles/main.dir/main.cpp.o: Student.h
 CMakeFiles/main.dir/main.cpp.o: main.cpp
 CMakeFiles/main.dir/main.cpp.o: prog4.cpp
 CMakeFiles/main.dir/main.cpp.o: prog4.h
+CMakeFiles/main.dir/main.cpp.o: vector_r.h
 

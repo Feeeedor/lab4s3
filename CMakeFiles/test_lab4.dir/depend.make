@@ -8,6 +8,7 @@ CMakeFiles/test_lab4.dir/test_lab4.cpp.o: Student.h
 CMakeFiles/test_lab4.dir/test_lab4.cpp.o: prog4.cpp
 CMakeFiles/test_lab4.dir/test_lab4.cpp.o: prog4.h
 CMakeFiles/test_lab4.dir/test_lab4.cpp.o: test_lab4.cpp
+CMakeFiles/test_lab4.dir/test_lab4.cpp.o: vector_r.h
 CMakeFiles/test_lab4.dir/test_lab4.cpp.o: googletest/googletest/include/gtest/gtest-assertion-result.h
 CMakeFiles/test_lab4.dir/test_lab4.cpp.o: googletest/googletest/include/gtest/gtest-death-test.h
 CMakeFiles/test_lab4.dir/test_lab4.cpp.o: googletest/googletest/include/gtest/gtest-matchers.h
